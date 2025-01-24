@@ -1,0 +1,14 @@
+.column {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+   /* margin-top: 10px; */
+}
+.header {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
