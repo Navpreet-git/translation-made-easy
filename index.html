@@ -2,42 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translation Page</title>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-  />
-  <link rel="stylesheet" href="styles.css">
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p></p>
-    <h2 class="ui header">
-        <i class="keyboard icon"></i>
-        <div class="content">
-          Translation made easy
-        </div>
-      </h2>
-    <div class="ui two column doubling stackable grid container ">
-        <div class="column">
-            <div class="ui icon input">
-                <input type="text" placeholder="Search...">
-                <i class="inverted circular search link icon"></i>
-              </div>
-              <button class="ui primary button">
-                Translate
-              </button>
-        </div>
-        <div class="column">
-            <div class="ui placeholder">
-                <div class="paragraph">
-                    <p>Translation will appear here</p>
+    <header class="ui container center aligned">
+        <h2 class="ui header">
+            <i class="keyboard icon"></i>
+            Translation Made Easy
+        </h2>
+    </header>
+
+    <main class="ui container">
+        <div class="ui two column doubling stackable grid">
+            <!-- Input Column -->
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <label for="from-lang">From Language</label>
+                        <select id="from-lang" class="ui dropdown"></select>
+                    </div>
+                    <div class="field">
+                        <textarea id="from-text" class="from-text" spellcheck="false" placeholder="Enter text here"></textarea>
+                    </div>
+                    <button id="translate-btn" class="ui primary button">Translate</button>
                 </div>
-              </div>
+            </div>
+            
+            <!-- Output Column -->
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <label for="to-lang">To Language</label>
+                        <select id="to-lang" class="ui dropdown"></select>
+                    </div>
+                    <div class="field">
+                        <textarea id="to-text" class="to-text" spellcheck="false" readonly disabled placeholder="Translation will appear here"></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <br>
-      <br>
-      
+    </main>
+
+    <script src="countries.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
